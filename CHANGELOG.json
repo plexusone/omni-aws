@@ -6,6 +6,27 @@
   "commitConvention": "conventional",
   "releases": [
     {
+      "version": "v0.5.0",
+      "date": "2026-04-12",
+      "highlights": [
+        { "description": "Migration to omnillm-core (thin/thick provider architecture)" }
+      ],
+      "changed": [
+        { "description": "Dependency changed from `omnillm` v0.14.0 to `omnillm-core` v0.15.0", "commit": "35b16ed" },
+        { "description": "Import paths updated from `omnillm/provider` to `omnillm-core/provider`", "commit": "35b16ed" }
+      ],
+      "upgradeGuide": [
+        { "description": "Update any direct imports from `github.com/plexusone/omnillm/provider` to `github.com/plexusone/omnillm-core/provider`" },
+        { "description": "Run `go get github.com/plexusone/omnillm-bedrock@v0.5.0` to update dependency" }
+      ],
+      "dependencies": [
+        { "description": "Replace `github.com/plexusone/omnillm` v0.14.0 with `github.com/plexusone/omnillm-core` v0.15.0", "commit": "35b16ed" }
+      ],
+      "documentation": [
+        { "description": "Updated README.md with correct import paths", "commit": "35b16ed" }
+      ]
+    },
+    {
       "version": "v0.4.0",
       "date": "2026-03-16",
       "highlights": [
