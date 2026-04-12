@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/plexusone/omnillm/provider"
+	"github.com/plexusone/omnillm-core/provider"
 )
 
 // Integration tests require AWS credentials configured via environment or AWS config file.

@@ -25,12 +25,12 @@
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
  [license-url]: https://github.com/plexusone/omnillm-bedrock/blob/master/LICENSE
 
-[OmniLLM](https://github.com/agentplexus/omnillm) Provider for AWS Bedrock is an external provider module that demonstrates how to create custom providers for OmniLLM without adding heavy dependencies to the core library.
+[OmniLLM](https://github.com/plexusone/omnillm-core) Provider for AWS Bedrock is an external provider module that demonstrates how to create custom providers for OmniLLM without adding heavy dependencies to the core library.
 
 ## Installation
 
 ```bash
-go get github.com/agentplexus/omnillm-bedrock
+go get github.com/plexusone/omnillm-bedrock
 ```
 
 ## Usage
@@ -42,9 +42,9 @@ import (
     "context"
     "log"
 
-    "github.com/agentplexus/omnillm"
-    "github.com/agentplexus/omnillm-bedrock"
-    "github.com/agentplexus/omnillm/provider"
+    "github.com/plexusone/omnillm-core"
+    "github.com/plexusone/omnillm-bedrock"
+    "github.com/plexusone/omnillm-core/provider"
 )
 
 func main() {
@@ -216,7 +216,7 @@ The AWS SDK v2 pulls in 17+ transitive dependencies (credentials, STS, SSO, EC2 
 
 To create a custom provider for omnillm:
 
-1. Implement the `provider.Provider` interface from `github.com/agentplexus/omnillm/provider`
+1. Implement the `provider.Provider` interface from `github.com/plexusone/omnillm-core/provider`
 2. Use `omnillm.ClientConfig.CustomProvider` to inject your provider
 
 See the source code of this module as a reference implementation.

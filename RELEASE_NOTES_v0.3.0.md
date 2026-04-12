@@ -16,7 +16,7 @@ This release completes the core functionality of omnillm-bedrock with streaming 
 ## Installation
 
 ```bash
-go get github.com/agentplexus/omnillm-bedrock@v0.3.0
+go get github.com/plexusone/omnillm-bedrock@v0.3.0
 ```
 
 ## New Features

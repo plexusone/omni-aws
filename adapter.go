@@ -1,5 +1,5 @@
 // Package bedrock provides AWS Bedrock provider adapter for the omnillm unified interface.
-// This is an external provider for github.com/plexusone/omnillm.
+// This is an external provider for github.com/plexusone/omnillm-core.
 package bedrock
 
 import (
@@ -13,7 +13,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime/document"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime/types"
-	"github.com/plexusone/omnillm/provider"
+	"github.com/plexusone/omnillm-core/provider"
 )
 
 // Provider represents the Bedrock provider adapter
