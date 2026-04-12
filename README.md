@@ -205,12 +205,17 @@ Using IAM credentials:
 
 The AWS SDK v2 pulls in 17+ transitive dependencies (credentials, STS, SSO, EC2 IMDS, etc.). By keeping Bedrock in a separate module, users who don't need AWS integration avoid downloading and compiling these dependencies.
 
-## Features
+## Feature Support
 
-- Chat completions (non-streaming and streaming)
-- Tool/function calling support
-- System prompts and multi-turn conversations
-- Works with all Bedrock models via the Converse API
+| Feature | Supported |
+|---------|-----------|
+| Chat Completion | Yes |
+| Streaming | Yes |
+| Tool Calling | Yes |
+| System Messages | Yes |
+| JSON Mode | No |
+
+Works with all Bedrock models via the Converse API. For full documentation, see [omnillm-core](https://github.com/plexusone/omnillm-core).
 
 ## Creating Your Own External Provider
 
