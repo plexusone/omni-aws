@@ -1,0 +1,105 @@
+{
+  "irVersion": "1.0",
+  "project": "omni-aws",
+  "repository": "https://github.com/plexusone/omni-aws",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "releases": [
+    {
+      "version": "v0.7.0",
+      "date": "2026-04-25",
+      "highlights": [
+        { "description": "Consolidated to single Go module at repository root" },
+        { "description": "Unified AWS provider package with both LLM (Bedrock) and Storage (S3) adapters" }
+      ],
+      "breaking": [
+        { "description": "Module path changed from `github.com/plexusone/omni-aws/omnillm` to `github.com/plexusone/omni-aws`" },
+        { "description": "Module path changed from `github.com/plexusone/omni-aws/omnistorage` to `github.com/plexusone/omni-aws`" }
+      ],
+      "upgradeGuide": [
+        { "description": "Import paths remain the same: `github.com/plexusone/omni-aws/omnillm` and `github.com/plexusone/omni-aws/omnistorage`" },
+        { "description": "Run `go get github.com/plexusone/omni-aws@v0.7.0` to update dependency" }
+      ],
+      "changed": [
+        { "description": "Removed nested `omnillm/go.mod` and `omnistorage/go.mod` in favor of root-level `go.mod`" },
+        { "description": "Consolidated changelogs from per-module to single repository changelog" },
+        { "description": "Simplified CI workflows (removed multi-module configuration)" }
+      ],
+      "internal": [
+        { "description": "Previous releases: `omnillm/v0.6.0` (Bedrock adapter), `omnistorage/v0.1.0` (S3 adapter)" }
+      ]
+    },
+    {
+      "version": "v0.6.0",
+      "date": "2026-04-25",
+      "highlights": [
+        { "description": "[omnillm] Repository reorganized as multi-module AWS provider package" }
+      ],
+      "breaking": [
+        { "description": "[omnillm] Module path changed from `github.com/plexusone/omnillm-bedrock` to `github.com/plexusone/omni-aws/omnillm`", "commit": "9bd30a4" }
+      ],
+      "added": [
+        { "description": "[omnistorage] S3 backend implementing `omnistorage.ExtendedBackend` interface", "commit": "7ff260a" },
+        { "description": "[omnistorage] Support for AWS S3, Cloudflare R2, MinIO, Wasabi, DigitalOcean Spaces", "commit": "7ff260a" },
+        { "description": "[omnistorage] Streaming read/write with multipart upload support", "commit": "7ff260a" },
+        { "description": "[omnistorage] Server-side copy and move operations", "commit": "7ff260a" },
+        { "description": "[omnistorage] Backend registry integration (auto-registers as `s3`)", "commit": "7ff260a" }
+      ]
+    },
+    {
+      "version": "v0.5.0",
+      "date": "2026-04-12",
+      "highlights": [
+        { "description": "[omnillm] Migration to omnillm-core (thin/thick provider architecture)" }
+      ],
+      "changed": [
+        { "description": "[omnillm] Dependency changed from `omnillm` v0.14.0 to `omnillm-core` v0.15.0", "commit": "35b16ed" }
+      ],
+      "dependencies": [
+        { "description": "Replace `github.com/plexusone/omnillm` with `github.com/plexusone/omnillm-core` v0.15.0", "commit": "35b16ed" }
+      ]
+    },
+    {
+      "version": "v0.4.0",
+      "date": "2026-03-16",
+      "highlights": [
+        { "description": "[omnillm] Organization migration from agentplexus to plexusone" }
+      ],
+      "breaking": [
+        { "description": "[omnillm] Module path changed from `github.com/agentplexus/omnillm-bedrock` to `github.com/plexusone/omnillm-bedrock`", "commit": "7fba48a" }
+      ]
+    },
+    {
+      "version": "v0.3.0",
+      "date": "2026-01-04",
+      "highlights": [
+        { "description": "[omnillm] Streaming support via Bedrock ConverseStream API" },
+        { "description": "[omnillm] Full tool/function calling with streaming tool deltas" },
+        { "description": "[omnillm] Bearer token authentication (`AWS_BEARER_TOKEN_BEDROCK`)" }
+      ],
+      "added": [
+        { "description": "[omnillm] Streaming support via `CreateChatCompletionStream`", "commit": "c06e0a6" },
+        { "description": "[omnillm] Tool/function calling support with `ToolConfiguration` mapping", "commit": "c06e0a6" },
+        { "description": "[omnillm] Bearer token authentication via `AWS_BEARER_TOKEN_BEDROCK`", "commit": "9327662" },
+        { "description": "[omnillm] Integration tests (8 tests) and unit tests (18 tests)", "commit": "229d6e8" }
+      ]
+    },
+    {
+      "version": "v0.2.0",
+      "date": "2025-12-27",
+      "added": [
+        { "description": "[omnillm] Core chat completion support via Bedrock Converse API", "commit": "3df093e" },
+        { "description": "[omnillm] System message handling, multi-turn conversation support", "commit": "3df093e" },
+        { "description": "[omnillm] Inference configuration (MaxTokens, Temperature, TopP, Stop)", "commit": "3df093e" }
+      ]
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2025-12-21",
+      "added": [
+        { "description": "[omnillm] Initial release with basic Bedrock client wrapper", "commit": "9c557d0" },
+        { "description": "[omnillm] Provider interface implementation for omnillm", "commit": "9c557d0" }
+      ]
+    }
+  ]
+}
