@@ -1,13 +1,19 @@
-module github.com/plexusone/omni-aws/omnistorage
+module github.com/plexusone/omni-aws
 
 go 1.26.0
 
 require (
+
+	// omnistorage dependencies
 	github.com/aws/aws-sdk-go-v2 v1.41.6
+	// omnillm dependencies
 	github.com/aws/aws-sdk-go-v2/config v1.32.16
 	github.com/aws/aws-sdk-go-v2/credentials v1.19.15
 	github.com/aws/aws-sdk-go-v2/feature/s3/transfermanager v0.1.18
+	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.50.5
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.100.0
+	github.com/aws/smithy-go v1.25.1
+	github.com/plexusone/omnillm-core v0.15.0
 	github.com/plexusone/omnistorage-core v0.3.0
 )
 
@@ -25,5 +31,4 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sso v1.30.16 // indirect
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.35.20 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.42.0 // indirect
-	github.com/aws/smithy-go v1.25.1 // indirect
 )
