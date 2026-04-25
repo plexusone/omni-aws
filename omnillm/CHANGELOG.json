@@ -1,10 +1,27 @@
 {
   "irVersion": "1.0",
-  "project": "omnillm-bedrock",
-  "repository": "https://github.com/plexusone/omnillm-bedrock",
+  "project": "omni-aws/omnillm",
+  "repository": "https://github.com/plexusone/omni-aws",
   "versioning": "semver",
   "commitConvention": "conventional",
   "releases": [
+    {
+      "version": "v0.6.0",
+      "date": "2026-04-25",
+      "highlights": [
+        { "description": "Repository reorganized as multi-module AWS provider package" }
+      ],
+      "breaking": [
+        { "description": "Module path changed from `github.com/plexusone/omnillm-bedrock` to `github.com/plexusone/omni-aws/omnillm`", "commit": "9bd30a4" }
+      ],
+      "upgradeGuide": [
+        { "description": "Update import paths from `github.com/plexusone/omnillm-bedrock` to `github.com/plexusone/omni-aws/omnillm`" },
+        { "description": "Run `go get github.com/plexusone/omni-aws/omnillm@v0.6.0` to update dependency" }
+      ],
+      "changed": [
+        { "description": "Code moved to `omnillm/` subdirectory within omni-aws monorepo", "commit": "9bd30a4" }
+      ]
+    },
     {
       "version": "v0.5.0",
       "date": "2026-04-12",
