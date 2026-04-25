@@ -6,22 +6,32 @@ on:
     branches:
       - main
     paths:
-      - '**.go'
-      - 'go.mod'
-      - 'go.sum'
-      - '.golangci.yml'
+      - 'omnillm/**.go'
+      - 'omnillm/go.mod'
+      - 'omnillm/go.sum'
+      - 'omnillm/.golangci.yaml'
+      - 'omnistorage/**.go'
+      - 'omnistorage/go.mod'
+      - 'omnistorage/go.sum'
+      - 'omnistorage/.golangci.yaml'
       - '.github/workflows/go-lint.yaml'
   pull_request:
     branches:
       - main
     paths:
-      - '**.go'
-      - 'go.mod'
-      - 'go.sum'
-      - '.golangci.yml'
+      - 'omnillm/**.go'
+      - 'omnillm/go.mod'
+      - 'omnillm/go.sum'
+      - 'omnillm/.golangci.yaml'
+      - 'omnistorage/**.go'
+      - 'omnistorage/go.mod'
+      - 'omnistorage/go.sum'
+      - 'omnistorage/.golangci.yaml'
       - '.github/workflows/go-lint.yaml'
   workflow_dispatch:
 
 jobs:
   lint:
     uses: plexusone/.github/.github/workflows/go-lint.yaml@main
+    with:
+      modules: '["omnillm", "omnistorage"]'
