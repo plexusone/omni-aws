@@ -8,23 +8,17 @@ on:
     branches:
       - main
     paths:
-      - 'omnillm/**.go'
-      - 'omnillm/go.mod'
-      - 'omnillm/go.sum'
-      - 'omnistorage/**.go'
-      - 'omnistorage/go.mod'
-      - 'omnistorage/go.sum'
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
       - '.github/workflows/go-sast-codeql.yaml'
   pull_request:
     branches:
       - main
     paths:
-      - 'omnillm/**.go'
-      - 'omnillm/go.mod'
-      - 'omnillm/go.sum'
-      - 'omnistorage/**.go'
-      - 'omnistorage/go.mod'
-      - 'omnistorage/go.sum'
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
       - '.github/workflows/go-sast-codeql.yaml'
   schedule:
     - cron: '0 6 * * 1'
@@ -33,5 +27,3 @@ on:
 jobs:
   sast:
     uses: plexusone/.github/.github/workflows/go-sast-codeql.yaml@main
-    with:
-      modules: '["omnillm", "omnistorage"]'
