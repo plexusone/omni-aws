@@ -1,4 +1,4 @@
-module github.com/plexusone/omnillm-bedrock
+module github.com/plexusone/omni-aws/omnillm
 
 go 1.26.0
 
