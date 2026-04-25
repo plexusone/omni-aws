@@ -77,61 +77,64 @@
         { "description": "Comprehensive test suite: 18 unit tests + 8 integration tests" }
       ],
       "added": [
-        { "description": "Streaming support via `CreateChatCompletionStream` using Bedrock's ConverseStream API" },
-        { "description": "`stream.go` with event handling for text deltas, tool use deltas, and metadata" },
-        { "description": "Tool/function calling support with `ToolConfiguration` mapping" },
-        { "description": "Tool choice options: auto, required, none, specific tool" },
-        { "description": "Streaming tool call support with incremental argument delivery" },
-        { "description": "Bearer token authentication via `AWS_BEARER_TOKEN_BEDROCK` environment variable" },
-        { "description": "Integration tests (8 tests) covering completions, streaming, and tool calling" },
-        { "description": "Unit tests (18 tests) with mock Bedrock client" },
-        { "description": "CI/CD documentation for GitHub Actions with both auth methods" }
+        { "description": "Streaming support via `CreateChatCompletionStream` using Bedrock's ConverseStream API", "commit": "c06e0a6" },
+        { "description": "`stream.go` with event handling for text deltas, tool use deltas, and metadata", "commit": "c06e0a6" },
+        { "description": "Tool/function calling support with `ToolConfiguration` mapping", "commit": "c06e0a6" },
+        { "description": "Tool choice options: auto, required, none, specific tool", "commit": "c06e0a6" },
+        { "description": "Streaming tool call support with incremental argument delivery", "commit": "c06e0a6" },
+        { "description": "Bearer token authentication via `AWS_BEARER_TOKEN_BEDROCK` environment variable", "commit": "9327662" },
+        { "description": "Integration tests (8 tests) covering completions, streaming, and tool calling", "commit": "229d6e8" },
+        { "description": "Unit tests (18 tests) with mock Bedrock client", "commit": "229d6e8" },
+        { "description": "CI/CD documentation for GitHub Actions with both auth methods", "commit": "7ccf0c2" }
       ],
       "changed": [
-        { "description": "README.md updated with credential chain priority table" },
-        { "description": "README.md updated with testing documentation and environment variables" },
-        { "description": "Bedrock model access section simplified (AWS auto-enables models on first invocation)" }
+        { "description": "README.md updated with credential chain priority table", "commit": "7ccf0c2" },
+        { "description": "README.md updated with testing documentation and environment variables", "commit": "7ccf0c2" },
+        { "description": "Bedrock model access section simplified (AWS auto-enables models on first invocation)", "commit": "7ccf0c2" }
       ],
       "removed": [
-        { "description": "`types.go` removed (types consolidated into other files)" }
+        { "description": "`types.go` removed (types consolidated into other files)", "commit": "c06e0a6" }
       ],
       "dependencies": [
-        { "description": "Added `github.com/aws/smithy-go` as direct dependency for bearer token support", "component": "github.com/aws/smithy-go", "componentVersion": "1.24.0" }
+        { "description": "Added `github.com/aws/smithy-go` as direct dependency for bearer token support", "commit": "9327662", "component": "github.com/aws/smithy-go", "componentVersion": "1.24.0" }
       ],
       "documentation": [
-        { "description": "Added AWS authentication priority table with 7 credential sources" },
-        { "description": "Added Bedrock API key setup instructions" },
-        { "description": "Added Testing section with unit and integration test commands" },
-        { "description": "Added CI/CD examples for GitHub Actions" },
-        { "description": "Created ROADMAP.md with implementation phases" }
+        { "description": "Added AWS authentication priority table with 7 credential sources", "commit": "7ccf0c2" },
+        { "description": "Added Bedrock API key setup instructions", "commit": "7ccf0c2" },
+        { "description": "Added Testing section with unit and integration test commands", "commit": "7ccf0c2" },
+        { "description": "Added CI/CD examples for GitHub Actions", "commit": "7ccf0c2" },
+        { "description": "Created ROADMAP.md with implementation phases", "commit": "7ccf0c2" }
       ],
       "internal": [
-        { "description": "Added `.gitignore` for credentials and IDE files" },
-        { "description": "Renamed `.env.sh` to `.envrc` for direnv compatibility" }
+        { "description": "Added `.gitignore` for credentials and IDE files", "commit": "fdb2d1f" },
+        { "description": "Renamed `.env.sh` to `.envrc` for direnv compatibility", "commit": "fdb2d1f" }
       ]
     },
     {
       "version": "v0.2.0",
-      "date": "2025-12-15",
+      "date": "2025-12-27",
       "added": [
-        { "description": "Core chat completion support via Bedrock Converse API" },
-        { "description": "System message handling (extracted to Bedrock system blocks)" },
-        { "description": "Multi-turn conversation support" },
-        { "description": "Inference configuration (MaxTokens, Temperature, TopP, Stop)" },
-        { "description": "Token usage reporting" }
+        { "description": "Core chat completion support via Bedrock Converse API", "commit": "3df093e" },
+        { "description": "System message handling (extracted to Bedrock system blocks)", "commit": "3df093e" },
+        { "description": "Multi-turn conversation support", "commit": "3df093e" },
+        { "description": "Inference configuration (MaxTokens, Temperature, TopP, Stop)", "commit": "3df093e" },
+        { "description": "Token usage reporting", "commit": "3df093e" }
       ],
       "documentation": [
-        { "description": "Initial README with usage examples" },
-        { "description": "AWS authentication documentation" }
+        { "description": "Initial README with usage examples", "commit": "3df093e" },
+        { "description": "AWS authentication documentation", "commit": "3df093e" }
+      ],
+      "ci": [
+        { "description": "Add GitHub Actions CI workflow", "commit": "9babd35" }
       ]
     },
     {
       "version": "v0.1.0",
-      "date": "2025-12-01",
+      "date": "2025-12-21",
       "added": [
-        { "description": "Initial release" },
-        { "description": "Basic Bedrock client wrapper" },
-        { "description": "Provider interface implementation for omnillm" }
+        { "description": "Initial release", "commit": "9c557d0" },
+        { "description": "Basic Bedrock client wrapper", "commit": "9c557d0" },
+        { "description": "Provider interface implementation for omnillm", "commit": "9c557d0" }
       ]
     }
   ]
