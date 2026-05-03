@@ -38,6 +38,7 @@ This repository contains multiple Go modules for AWS integrations:
 |--------|-------------|---------|
 | [`omnillm`](omnillm/) | AWS Bedrock provider for [omnillm-core](https://github.com/plexusone/omnillm-core) | `go get github.com/plexusone/omni-aws/omnillm` |
 | [`omnistorage`](omnistorage/) | S3 backend for [omnistorage-core](https://github.com/plexusone/omnistorage-core) | `go get github.com/plexusone/omni-aws/omnistorage` |
+| [`omnivault`](omnivault/) | AWS Secrets Manager & Parameter Store for [omnivault](https://github.com/plexusone/omnivault) | `go get github.com/plexusone/omni-aws/omnivault` |
 
 ## Quick Start
 
@@ -89,6 +90,32 @@ r.Close()
 ```
 
 See [omnistorage/README.md](omnistorage/) for full documentation including S3-compatible services (R2, MinIO, Wasabi).
+
+### OmniVault - AWS Secrets Manager & Parameter Store
+
+```go
+import (
+    aws "github.com/plexusone/omni-aws/omnivault"
+)
+
+// Create Secrets Manager provider
+provider, err := aws.NewSecretsManager(aws.Config{
+    Region: "us-east-1",
+})
+
+// Get a secret
+secret, err := provider.Get(ctx, "prod/database/credentials")
+fmt.Println("Password:", secret.Value)
+fmt.Println("Username:", secret.Fields["username"])
+
+// Or use Parameter Store
+ssmProvider, err := aws.NewParameterStore(aws.Config{
+    Region: "us-east-1",
+})
+param, err := ssmProvider.Get(ctx, "/myapp/prod/api-key")
+```
+
+See [omnivault/README.md](omnivault/) for full documentation including IRSA, versioning, and rotation.
 
 ## License
 
