@@ -1,4 +1,4 @@
-# omni-aws
+# Omni-AWS
 
 AWS providers for the PlexusOne ecosystem.
 
