@@ -11,9 +11,13 @@ require (
 	github.com/aws/aws-sdk-go-v2/feature/s3/transfermanager v0.1.20
 	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.50.6
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.100.1
+	// omnivault dependencies
+	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.41.7
+	github.com/aws/aws-sdk-go-v2/service/ssm v1.68.6
 	github.com/aws/smithy-go v1.25.1
 	github.com/plexusone/omnillm-core v0.15.0
 	github.com/plexusone/omnistorage-core v0.3.0
+	github.com/plexusone/omnivault v0.3.0
 )
 
 require (
