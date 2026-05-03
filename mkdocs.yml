@@ -45,6 +45,10 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Packages:
+      - OmniLLM (Bedrock): omnillm/index.md
+      - OmniStorage (S3): omnistorage/index.md
+      - OmniVault (Secrets): omnivault/index.md
   - Releases:
       - releases/index.md
       - v0.8.0: releases/v0.8.0.md
