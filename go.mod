@@ -20,6 +20,8 @@ require (
 	github.com/plexusone/omnivault v0.3.0
 )
 
+require github.com/grokify/mogo v0.74.2
+
 require (
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.7.10 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.23 // indirect

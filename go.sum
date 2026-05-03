@@ -42,6 +42,8 @@ github.com/aws/aws-sdk-go-v2/service/sts v1.42.1 h1:F/M5Y9I3nwr2IEpshZgh1GeHpOIt
 github.com/aws/aws-sdk-go-v2/service/sts v1.42.1/go.mod h1:mTNxImtovCOEEuD65mKW7DCsL+2gjEH+RPEAexAzAio=
 github.com/aws/smithy-go v1.25.1 h1:J8ERsGSU7d+aCmdQur5Txg6bVoYelvQJgtZehD12GkI=
 github.com/aws/smithy-go v1.25.1/go.mod h1:YE2RhdIuDbA5E5bTdciG9KrW3+TiEONeUWCqxX9i1Fc=
+github.com/grokify/mogo v0.74.2 h1:sEuHSkp8W0b5WQNTrfX00nC4FtBa1Xk59sHba7HPo3M=
+github.com/grokify/mogo v0.74.2/go.mod h1:s3vcTH43UicVMGkf6bm5hXzXqjuM1CB9MtyQ4+3wIIw=
 github.com/plexusone/omnillm-core v0.15.0 h1:yyWCHMiFZh3Dhi3Y5t/esjmfBE7/3UaPQhTyVnqUk20=
 github.com/plexusone/omnillm-core v0.15.0/go.mod h1:k/RC3lp5N7HP2UcwGxJpYu3xE+F7mrBEqJ76fxur/HA=
 github.com/plexusone/omnistorage-core v0.3.0 h1:bdobNqlJuOKUgM512hmyqS3ZqTnix4Zmkq1fQf0Qk/U=

@@ -13,3 +13,6 @@
 
 # Test binaries
 *.test
+
+# MkDocs build output
+site/
