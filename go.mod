@@ -17,7 +17,7 @@ require (
 	github.com/aws/smithy-go v1.27.2
 	github.com/grokify/mogo v0.74.6
 	github.com/plexusone/omnillm-core v0.17.0
-	github.com/plexusone/omnistorage-core v0.4.0
+	github.com/plexusone/omnistorage-core v0.5.0
 	github.com/plexusone/omnivault v0.5.0
 )
 
