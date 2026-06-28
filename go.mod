@@ -14,7 +14,7 @@ require (
 	// omnivault dependencies
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.42.3
 	github.com/aws/aws-sdk-go-v2/service/ssm v1.69.3
-	github.com/aws/smithy-go v1.27.2
+	github.com/aws/smithy-go v1.27.3
 	github.com/grokify/mogo v0.74.6
 	github.com/plexusone/omnillm-core v0.17.0
 	github.com/plexusone/omnistorage-core v0.5.0
