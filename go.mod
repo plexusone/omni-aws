@@ -1,6 +1,6 @@
 module github.com/plexusone/omni-aws
 
-go 1.26.0
+go 1.26.4
 
 require (
 	// omnistorage dependencies
@@ -8,15 +8,20 @@ require (
 	// omnillm dependencies
 	github.com/aws/aws-sdk-go-v2/config v1.32.25
 	github.com/aws/aws-sdk-go-v2/credentials v1.19.24
+	// omnimemory dependencies
+	github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue v1.20.48
 	github.com/aws/aws-sdk-go-v2/feature/s3/transfermanager v0.2.11
 	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.54.0
+	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.59.0
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.104.0
 	// omnivault dependencies
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.42.3
 	github.com/aws/aws-sdk-go-v2/service/ssm v1.69.3
 	github.com/aws/smithy-go v1.27.3
+	github.com/google/uuid v1.6.0
 	github.com/grokify/mogo v0.74.6
 	github.com/plexusone/omnillm-core v0.17.0
+	github.com/plexusone/omnimemory v0.0.0
 	github.com/plexusone/omnistorage-core v0.5.0
 	github.com/plexusone/omnivault v0.5.0
 )
@@ -27,8 +32,10 @@ require (
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.29 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.29 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.30 // indirect
+	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.34.0 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.12 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.9.22 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.12.6 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.29 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.29 // indirect
 	github.com/aws/aws-sdk-go-v2/service/signin v1.2.0 // indirect
@@ -37,3 +44,5 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.43.3 // indirect
 	github.com/grokify/oscompat v0.4.0 // indirect
 )
+
+replace github.com/plexusone/omnimemory => ../omnimemory
