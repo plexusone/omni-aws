@@ -58,6 +58,8 @@ github.com/grokify/oscompat v0.4.0 h1:1orYWC7QG8vAdlDqCFULZf9eIovwc35UFzVoxGNFRS
 github.com/grokify/oscompat v0.4.0/go.mod h1:Ekex/WzHaA39LNt5xbeQRASo74NEXAIqBlqdvNF2oUM=
 github.com/plexusone/omnillm-core v0.17.0 h1:mzM1yVt7sSFxHqNmyhoV6GxYsqfFOD/m1tWyv2qFpec=
 github.com/plexusone/omnillm-core v0.17.0/go.mod h1:180U/oa67fly3+T3h1sL/pBMvcjIKR+bvSEkAGnalMY=
+github.com/plexusone/omnimemory v0.1.0 h1:Wv9i66aaVaKOXTUGmdcU++mLf1j98wKLpZcGrgAwXow=
+github.com/plexusone/omnimemory v0.1.0/go.mod h1:rKP37hULOs5WYe8V3MmLURYd5nJoZLkUEd8I0vExvdI=
 github.com/plexusone/omnistorage-core v0.5.0 h1:gORFoef2hysWTbn2/ndWoAQFsL0PRG6pSxNvTdAnPMI=
 github.com/plexusone/omnistorage-core v0.5.0/go.mod h1:YIUrTHj75Z8lSSRE/4ZaLF+DZvLQJGC2OU0ctjPfg8Y=
 github.com/plexusone/omnivault v0.5.0 h1:7oZwP1KNS+XQ1ksoZoKnLS9PV0TQ93b5NEuxO0T2Hwg=

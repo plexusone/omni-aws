@@ -21,7 +21,7 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/grokify/mogo v0.74.6
 	github.com/plexusone/omnillm-core v0.17.0
-	github.com/plexusone/omnimemory v0.0.0
+	github.com/plexusone/omnimemory v0.1.0
 	github.com/plexusone/omnistorage-core v0.5.0
 	github.com/plexusone/omnivault v0.5.0
 )
@@ -44,5 +44,3 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.43.3 // indirect
 	github.com/grokify/oscompat v0.4.0 // indirect
 )
-
-replace github.com/plexusone/omnimemory => ../omnimemory
