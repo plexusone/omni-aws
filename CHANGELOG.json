@@ -6,6 +6,34 @@
   "commitConvention": "conventional",
   "releases": [
     {
+      "version": "v0.9.0",
+      "date": "2026-06-28",
+      "highlights": [
+        { "description": "OmniMemory DynamoDB provider for serverless memory storage" },
+        { "description": "Multi-tenant isolation with automatic TTL and scaling" }
+      ],
+      "added": [
+        { "description": "[omnimemory] DynamoDB provider implementing `omnimemory.Provider` interface", "commit": "0695f99" },
+        { "description": "[omnimemory] Single-table design with partition key (tenant_id) and sort key (subject_id#memory_id)", "commit": "0695f99" },
+        { "description": "[omnimemory] Automatic TTL support via `expires_at` attribute", "commit": "0695f99" },
+        { "description": "[omnimemory] In-memory vector search with cosine similarity", "commit": "0695f99" },
+        { "description": "[omnimemory] Auto-create table option for development", "commit": "0695f99" },
+        { "description": "[omnimemory] Multi-tenant isolation via partition keys", "commit": "0695f99" },
+        { "description": "[omnimemory] Custom endpoint support for DynamoDB Local", "commit": "0695f99" }
+      ],
+      "documentation": [
+        { "description": "[omnimemory] Comprehensive DynamoDB provider documentation with examples", "commit": "79f0dad" },
+        { "description": "[omnimemory] Configuration options, table schema, and IAM permissions guide", "commit": "79f0dad" },
+        { "description": "[omnimemory] Local development setup with DynamoDB Local", "commit": "79f0dad" },
+        { "description": "[omnimemory] Multi-tenancy and semantic search explanations", "commit": "79f0dad" }
+      ],
+      "dependencies": [
+        { "description": "Update Go module dependencies", "commit": "bd92632" },
+        { "description": "Update Go module dependencies", "commit": "32144af" },
+        { "description": "Update Go module dependencies", "commit": "26f5181" }
+      ]
+    },
+    {
       "version": "v0.8.0",
       "date": "2026-05-03",
       "highlights": [
