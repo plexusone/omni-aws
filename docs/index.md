@@ -7,6 +7,7 @@ AWS providers for the PlexusOne ecosystem.
 | Package | Description | Import Path |
 |---------|-------------|-------------|
 | **omnillm** | AWS Bedrock provider for OmniLLM | `github.com/plexusone/omni-aws/omnillm` |
+| **omnimemory** | DynamoDB provider for OmniMemory | `github.com/plexusone/omni-aws/omnimemory/dynamodb` |
 | **omnistorage** | S3 backend for OmniStorage | `github.com/plexusone/omni-aws/omnistorage/backend/s3` |
 | **omnivault** | Secrets Manager & Parameter Store for OmniVault | `github.com/plexusone/omni-aws/omnivault` |
 
@@ -25,6 +26,25 @@ import "github.com/plexusone/omni-aws/omnillm"
 
 provider, err := bedrock.New(bedrock.Config{
     Region: "us-east-1",
+})
+```
+
+### OmniMemory (DynamoDB)
+
+```go
+import (
+    "github.com/plexusone/omnimemory"
+    "github.com/plexusone/omnimemory/core"
+    _ "github.com/plexusone/omni-aws/omnimemory/dynamodb"
+)
+
+client, _ := omnimemory.NewClient(core.ClientConfig{
+    Providers: []core.ProviderConfig{
+        {Name: core.ProviderNameAWSDynamoDB, Options: map[string]any{
+            "table_name": "omnimemory",
+            "region":     "us-east-1",
+        }},
+    },
 })
 ```
 

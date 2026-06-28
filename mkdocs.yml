@@ -47,6 +47,7 @@ nav:
   - Home: index.md
   - Packages:
       - OmniLLM (Bedrock): omnillm/index.md
+      - OmniMemory (DynamoDB): omnimemory/index.md
       - OmniStorage (S3): omnistorage/index.md
       - OmniVault (Secrets): omnivault/index.md
   - Releases:
