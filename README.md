@@ -39,6 +39,7 @@ This repository contains multiple Go modules for AWS integrations:
 | [`omnillm`](omnillm/) | AWS Bedrock provider for [omnillm-core](https://github.com/plexusone/omnillm-core) | `go get github.com/plexusone/omni-aws/omnillm` |
 | [`omnistorage`](omnistorage/) | S3 backend for [omnistorage-core](https://github.com/plexusone/omnistorage-core) | `go get github.com/plexusone/omni-aws/omnistorage` |
 | [`omnivault`](omnivault/) | AWS Secrets Manager & Parameter Store for [omnivault](https://github.com/plexusone/omnivault) | `go get github.com/plexusone/omni-aws/omnivault` |
+| [`omnimemory`](omnimemory/) | DynamoDB provider for [omnimemory](https://github.com/plexusone/omnimemory) | `go get github.com/plexusone/omni-aws/omnimemory` |
 
 ## Quick Start
 
@@ -116,6 +117,51 @@ param, err := ssmProvider.Get(ctx, "/myapp/prod/api-key")
 ```
 
 See [omnivault/README.md](omnivault/) for full documentation including IRSA, versioning, and rotation.
+
+### OmniMemory - DynamoDB Provider
+
+```go
+import (
+    "github.com/plexusone/omnimemory"
+    "github.com/plexusone/omnimemory/core"
+    _ "github.com/plexusone/omni-aws/omnimemory/dynamodb"
+)
+
+// Create DynamoDB-backed memory client
+client, err := omnimemory.NewClient(core.ClientConfig{
+    Providers: []core.ProviderConfig{
+        {
+            Name: core.ProviderNameAWSDynamoDB,
+            Options: map[string]any{
+                "table_name": "omnimemory",
+                "region":     "us-east-1",
+            },
+        },
+    },
+})
+
+// Add a memory
+memory, err := client.Add(ctx, &core.AddRequest{
+    Context: core.Context{
+        TenantID:  "tenant-123",
+        SubjectID: "user-456",
+    },
+    Type:    core.MemoryTypeObservation,
+    Content: "User prefers dark mode interfaces",
+})
+
+// Search memories
+results, err := client.Search(ctx, &core.SearchRequest{
+    Context: core.Context{
+        TenantID:  "tenant-123",
+        SubjectID: "user-456",
+    },
+    Query: "interface preferences",
+    Limit: 10,
+})
+```
+
+See [omnimemory/README.md](omnimemory/) for full documentation including local development, TTL, and multi-tenancy.
 
 ## License
 
