@@ -4,6 +4,31 @@
   "repository": "https://github.com/plexusone/omni-aws",
   "versioning": "semver",
   "commitConvention": "conventional",
+  "unreleased": {
+    "highlights": [
+      { "description": "OmniMail Amazon SES v2 sender for transactional email" }
+    ],
+    "added": [
+      { "description": "[omnimail] Amazon SES v2 sender implementing `omnimail.Sender`, delivering raw MIME built by `omnimail.BuildMIME` through `SendEmail`", "commit": "591889a" },
+      { "description": "[omnimail] SES message tags from `Message.Tags` and `Config.DefaultTags`, validated against SES tag rules", "commit": "591889a" },
+      { "description": "[omnimail] Configuration set, sending authorization identity ARN, and feedback forwarding address options", "commit": "591889a" },
+      { "description": "[omnimail] `Classify` maps SES error codes to omnimail error kinds with `Retry-After` support", "commit": "591889a" },
+      { "description": "[omnimail] Non-ASCII addresses rejected as `KindInvalidAddress` because SES does not support SMTPUTF8", "commit": "591889a" }
+    ],
+    "dependencies": [
+      { "description": "Add `github.com/aws/aws-sdk-go-v2/service/sesv2` v1.77.0 for the OmniMail SES sender", "commit": "591889a" },
+      { "description": "Update aws-sdk-go-v2 modules to the v1.47.1 release set and `smithy-go` to v1.28.3", "commit": "1e23455" },
+      { "description": "Require `github.com/plexusone/omnimail` through a local replace directive until its first release", "commit": "3293ef3" }
+    ],
+    "documentation": [
+      { "description": "[omnimail] SES sender guide with error mapping, IAM policy, and SES sandbox, DKIM, SPF and DMARC setup", "commit": "611b6f9" },
+      { "description": "Add OmniMail package links to README, docs index, and MkDocs navigation", "commit": "611b6f9" }
+    ],
+    "tests": [
+      { "description": "[omnimail] omnimail conformance suite against an httptest fake of the SES v2 SendEmail endpoint", "commit": "3db44fc" },
+      { "description": "[omnimail] Table-driven SES error classification tests and an opt-in mailbox simulator integration test", "commit": "3db44fc" }
+    ]
+  },
   "releases": [
     {
       "version": "v0.10.0",
