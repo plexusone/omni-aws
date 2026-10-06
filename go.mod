@@ -16,6 +16,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.114.0
 	// omnivault dependencies
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.50.1
+	// omnimail dependencies
+	github.com/aws/aws-sdk-go-v2/service/sesv2 v1.77.0
 	github.com/aws/aws-sdk-go-v2/service/ssm v1.79.0
 	github.com/aws/smithy-go v1.28.3
 	github.com/google/uuid v1.6.0
