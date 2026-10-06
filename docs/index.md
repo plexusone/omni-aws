@@ -1,6 +1,6 @@
 # Omni-AWS
 
-AWS providers for the PlexusOne ecosystem, covering LLM access, storage,
+AWS providers for the PlexusOne ecosystem, covering LLM access, email, storage,
 secrets, memory, and developer-experience telemetry.
 
 ## Packages
@@ -8,6 +8,7 @@ secrets, memory, and developer-experience telemetry.
 | Package | Description | Import Path |
 |---------|-------------|-------------|
 | **omnillm** | AWS Bedrock provider for OmniLLM | `github.com/plexusone/omni-aws/omnillm` |
+| **omnimail** | Amazon SES v2 sender for OmniMail | `github.com/plexusone/omni-aws/omnimail` |
 | **omnimemory** | DynamoDB provider for OmniMemory | `github.com/plexusone/omni-aws/omnimemory/dynamodb` |
 | **omnistorage** | S3 backend for OmniStorage | `github.com/plexusone/omni-aws/omnistorage/backend/s3` |
 | **omnivault** | Secrets Manager & Parameter Store for OmniVault | `github.com/plexusone/omni-aws/omnivault` |
@@ -51,6 +52,19 @@ provider, err := bedrock.New(bedrock.Config{
     Region: "us-east-1",
 })
 ```
+
+### OmniMail (SES)
+
+```go
+import ses "github.com/plexusone/omni-aws/omnimail"
+
+sender, err := ses.New(ses.Config{
+    Region: "us-east-1",
+})
+```
+
+See [OmniMail: Amazon SES](omnimail/index.md) for configuration, error
+mapping, IAM and SES domain setup.
 
 ### OmniMemory (DynamoDB)
 

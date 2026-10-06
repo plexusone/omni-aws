@@ -30,6 +30,7 @@ AWS provider packages for [PlexusOne](https://github.com/plexusone) libraries.
 ## Features
 
 - **OmniLLM**: AWS Bedrock chat completion provider.
+- **OmniMail**: Amazon SES v2 transactional email sender.
 - **OmniStorage**: S3-compatible object storage backend.
 - **OmniVault**: AWS Secrets Manager and Parameter Store providers.
 - **OmniMemory**: DynamoDB-backed memory provider.
@@ -43,6 +44,7 @@ This repository contains multiple Go modules for AWS integrations:
 | Module | Description | Install |
 |--------|-------------|---------|
 | [`omnillm`](omnillm/) | AWS Bedrock provider for [omnillm-core](https://github.com/plexusone/omnillm-core) | `go get github.com/plexusone/omni-aws/omnillm` |
+| [`omnimail`](omnimail/) | Amazon SES v2 sender for [omnimail](https://github.com/plexusone/omnimail) | `go get github.com/plexusone/omni-aws/omnimail` |
 | [`omnistorage`](omnistorage/) | S3 backend for [omnistorage-core](https://github.com/plexusone/omnistorage-core) | `go get github.com/plexusone/omni-aws/omnistorage` |
 | [`omnivault`](omnivault/) | AWS Secrets Manager & Parameter Store for [omnivault](https://github.com/plexusone/omnivault) | `go get github.com/plexusone/omni-aws/omnivault` |
 | [`omnimemory`](omnimemory/) | DynamoDB provider for [omnimemory](https://github.com/plexusone/omnimemory) | `go get github.com/plexusone/omni-aws/omnimemory` |
@@ -72,6 +74,30 @@ resp, err := client.CreateChatCompletion(ctx, omnillm.ChatCompletionRequest{
 ```
 
 See [omnillm/README.md](omnillm/README.md) for full documentation.
+
+### OmniMail - Amazon SES
+
+```go
+import (
+    "github.com/plexusone/omnimail"
+    ses "github.com/plexusone/omni-aws/omnimail"
+)
+
+sender, err := ses.New(ses.Config{
+    Region:               "us-east-1",
+    ConfigurationSetName: "transactional",
+})
+
+res, err := sender.Send(ctx, &omnimail.Message{
+    From:    omnimail.Address{Email: "no-reply@example.com"},
+    To:      []omnimail.Address{{Email: "user@example.org"}},
+    Subject: "Verify your email",
+    Text:    "Open this link to verify your address: https://example.com/verify?t=...",
+    Tags:    map[string]string{"purpose": "verify_email"},
+})
+```
+
+See [omnimail/README.md](omnimail/README.md) for error mapping, the IAM policy, and SES domain setup (DKIM, SPF, DMARC, sandbox).
 
 ### OmniStorage - S3 Backend
 

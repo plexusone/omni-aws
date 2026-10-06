@@ -1,5 +1,5 @@
 site_name: omni-aws
-site_description: AWS providers for PlexusOne ecosystem (OmniLLM, OmniStorage, OmniVault, OmniMemory, OmniDevX)
+site_description: AWS providers for PlexusOne ecosystem (OmniLLM, OmniMail, OmniStorage, OmniVault, OmniMemory, OmniDevX)
 site_url: https://plexusone.github.io/omni-aws
 repo_url: https://github.com/plexusone/omni-aws
 repo_name: plexusone/omni-aws
@@ -47,6 +47,7 @@ nav:
   - Home: index.md
   - Packages:
       - OmniLLM (Bedrock): omnillm/index.md
+      - OmniMail (SES): omnimail/index.md
       - OmniMemory (DynamoDB): omnimemory/index.md
       - OmniStorage (S3): omnistorage/index.md
       - OmniVault (Secrets): omnivault/index.md
