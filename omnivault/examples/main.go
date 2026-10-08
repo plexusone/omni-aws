@@ -38,7 +38,7 @@ func main() {
 
 	// Example 2: Using convenience function with OmniVault client
 	fmt.Println("\n=== Using Convenience Functions ===")
-	if err := runConvenienceExample(ctx); err != nil {
+	if err := runConvenienceExample(); err != nil {
 		logError(ctx, "Convenience example failed", err)
 	}
 
@@ -95,7 +95,7 @@ func runSecretsManagerExample(ctx context.Context) error {
 }
 
 // runConvenienceExample demonstrates convenience functions with OmniVault client.
-func runConvenienceExample(ctx context.Context) error {
+func runConvenienceExample() error {
 	provider, err := aws.NewSecretsManager(aws.Config{
 		Region: "us-east-1",
 	})
