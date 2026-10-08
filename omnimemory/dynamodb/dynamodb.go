@@ -63,23 +63,23 @@ func init() {
 
 // memoryItem represents a memory stored in DynamoDB.
 type memoryItem struct {
-	PK        string  `dynamodbav:"pk"`         // tenant_id
-	SK        string  `dynamodbav:"sk"`         // subject_id#memory_id
-	ID        string  `dynamodbav:"id"`         // memory_id
-	TenantID  string  `dynamodbav:"tenant_id"`  // For GSI queries
-	SubjectID string  `dynamodbav:"subject_id"` // For filtering
-	AgentID   string  `dynamodbav:"agent_id,omitempty"`
-	SessionID string  `dynamodbav:"session_id,omitempty"`
-	Scope     string  `dynamodbav:"scope"`
-	Type      string  `dynamodbav:"type"`
-	Content   string  `dynamodbav:"content"`
-	Embedding string  `dynamodbav:"embedding,omitempty"` // JSON-encoded []float64
-	Metadata  string  `dynamodbav:"metadata,omitempty"`  // JSON-encoded map
-	CreatedAt int64   `dynamodbav:"created_at"`          // Unix timestamp
-	UpdatedAt int64   `dynamodbav:"updated_at"`          // Unix timestamp
-	ExpiresAt *int64  `dynamodbav:"expires_at,omitempty"` // TTL attribute
-	TypeSort  string  `dynamodbav:"type_sort,omitempty"`  // type#created_at for GSI
-	ScopeSort string  `dynamodbav:"scope_sort,omitempty"` // scope#created_at for GSI
+	PK        string `dynamodbav:"pk"`         // tenant_id
+	SK        string `dynamodbav:"sk"`         // subject_id#memory_id
+	ID        string `dynamodbav:"id"`         // memory_id
+	TenantID  string `dynamodbav:"tenant_id"`  // For GSI queries
+	SubjectID string `dynamodbav:"subject_id"` // For filtering
+	AgentID   string `dynamodbav:"agent_id,omitempty"`
+	SessionID string `dynamodbav:"session_id,omitempty"`
+	Scope     string `dynamodbav:"scope"`
+	Type      string `dynamodbav:"type"`
+	Content   string `dynamodbav:"content"`
+	Embedding string `dynamodbav:"embedding,omitempty"`  // JSON-encoded []float64
+	Metadata  string `dynamodbav:"metadata,omitempty"`   // JSON-encoded map
+	CreatedAt int64  `dynamodbav:"created_at"`           // Unix timestamp
+	UpdatedAt int64  `dynamodbav:"updated_at"`           // Unix timestamp
+	ExpiresAt *int64 `dynamodbav:"expires_at,omitempty"` // TTL attribute
+	TypeSort  string `dynamodbav:"type_sort,omitempty"`  // type#created_at for GSI
+	ScopeSort string `dynamodbav:"scope_sort,omitempty"` // scope#created_at for GSI
 }
 
 // Provider implements core.Provider using DynamoDB.
