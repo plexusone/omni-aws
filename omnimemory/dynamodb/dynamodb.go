@@ -43,6 +43,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"math"
 	"sort"
 	"strconv"
 	"strings"
@@ -350,9 +351,14 @@ func (p *Provider) List(ctx context.Context, req *core.ListRequest) (*core.ListR
 		exprAttrValues[":sk_prefix"] = &types.AttributeValueMemberS{Value: req.SubjectID + "#"}
 	}
 
-	limit := int32(req.Limit)
-	if limit <= 0 {
-		limit = 100
+	// DynamoDB takes an int32 limit; one more item is requested to detect
+	// HasMore, so cap the page below math.MaxInt32.
+	limit := int32(100)
+	switch {
+	case req.Limit > math.MaxInt32-1:
+		limit = math.MaxInt32 - 1
+	case req.Limit > 0:
+		limit = int32(req.Limit)
 	}
 
 	queryInput := &dynamodb.QueryInput{
