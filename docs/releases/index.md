@@ -6,6 +6,7 @@ Release notes for omni-aws versions.
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| [v0.11.0](v0.11.0.md) | 2026-10-08 | OmniMail Amazon SES v2 sender |
 | [v0.10.0](v0.10.0.md) | 2026-07-27 | OmniDevX Kiro CLI telemetry collector |
 | [v0.9.0](v0.9.0.md) | 2026-06-28 | OmniMemory DynamoDB provider |
 | [v0.8.0](v0.8.0.md) | 2026-05-03 | OmniVault AWS providers (Secrets Manager, Parameter Store) |
@@ -21,7 +22,7 @@ Release notes for omni-aws versions.
 
 This project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-- **v0.7.0+**: Unified single-module releases covering all packages (omnillm, omnistorage, omnivault, omnimemory, omnidevx)
+- **v0.7.0+**: Unified single-module releases covering all packages (omnillm, omnistorage, omnivault, omnimemory, omnidevx, omnimail)
 - **v0.1.0-v0.6.0**: Historical releases primarily for omnillm (Bedrock provider)
 
 ## Full Changelog
